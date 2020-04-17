@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD - Busca</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+    <div id="intro">
+        <header>
+            <a href="/">
+                <img src="/assets/images/logo.png" alt="Crud">
+            </a>
+            
+            <nav>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/form">Cadastrar</a></li>
+            </nav>
+        </header>
+    
+        <section>
+            <div class="search">
+                <form onsubmit="return validateSeach()">
+                    <input type="text" name="key" class="col-full" value="{{key}}"
+                        placeholder="Entre com o que deseja buscar ...">
+                    <button type="submit">Buscar</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <section>
+        <table class="table">
+            <thead>
+                <tr>
+                  <th scope="col">id</th>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Telefone</th>
+                  <th scope="col">Cidade</th>
+                  <th scope="col">Github</th>
+                  <th scope="col">Descrições</th>
+                  <th scope="col">Opções</th>
+                </tr>
+              </thead>
+            <tbody>
+                {{#if programador}}
+                    {{#each programador}}
+                    <tr>
+                        <td class="id">{{this.id}}</th>
+                        <td>{{this.name}}</td>
+                        <td>{{this.email}}</td>
+                        <td>{{this.telefone}}</td>
+                        <td>{{this.cidade}}</td>
+                        <td>{{this.git}}</td>
+                        <td>{{this.descricao}}</td>
+                        <td><a href=""><img src="/assets/images/lapis.png" alt=""></a><a href="/delete/{{this.id}}"><img class="bin" src="/assets/images/bin.png" alt=""></a</td>
+                    </tr>
+                    {{/each}}
+                {{else}}
+                    <p>Nenhuma vaga disponível</p>
+                {{/if}}
+            </tbody>
+          </table>
+    </section>
+
+    <script src="/assets/js/scripts.js"></script>
+</body>
+</html>

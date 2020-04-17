@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD - Cadastro</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    
+</head>
+<body id="container">
+    <div class="content">
+        <h1>Cadastro</h1>
+
+        <form action="/form" onsubmit="return validateNotice(this)" method="POST">
+            <div class="input-wrapper">
+                <label for="name">Nome Completo</label>
+                <input type="text" name="name">
+            </div>
+
+            <div class="input-wrapper">
+                <label for="email">Email</label>
+                <input type="text" name="email">
+            </div>
+
+            <div class="input-wrapper">
+                <label for="telefone">Telefone</label>
+                <input type="text" name="telefone">
+            </div>
+
+            <div class="input-wrapper">
+                <label for="cidade">Cidade-Estado</label>
+                <input type="text" name="cidade">
+            </div>
+
+            <div class="input-wrapper">
+                <label for="git">Github</label>
+                <input type="text" name="git">
+            </div>
+
+            <div class="input-wrapper">
+                <label for="descricao">Linguagens de Programação</label>
+                <textarea name="descricao" cols="30" rows="5"></textarea>
+            </div>
+
+            <a href="/">Voltar</a>
+            <button type="submit">Salvar</button>
+        </form>
+    </div>
+
+    <script src="/assets/js/scripts.js"></script>
+</body>
+</html>

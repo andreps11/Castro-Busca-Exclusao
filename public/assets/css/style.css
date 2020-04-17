@@ -1,0 +1,222 @@
+body {
+    background: white;
+    color: #25282B;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+p {
+    font-size: 14px;
+}
+
+/* TABELA */
+
+td, th {
+    border: 2px solid #999;
+    padding: 5px 12px;
+    text-align: center;
+}
+
+th {
+    color: #4153b1;
+    background: rgb(236, 236, 236);
+    text-transform: uppercase;
+}
+
+.id {
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto 80px;
+}
+
+/* ----------------------------- */
+
+#intro {
+    background-color: black;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header img {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.title {
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+}
+
+nav {
+    display: flex;
+    margin: 0;
+}
+
+nav li {
+    width: 90px;
+    height: 30px;
+    margin-top: 30px;
+    margin-right: 16px;
+    background-color: #4153b1;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+nav li:hover {
+    background-color: #18235a;
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#container {
+    background: #4153b1;
+    display: flex;
+    justify-content: center;
+}
+
+#container .content {
+    margin-top: 20px;
+    color: white;
+}
+
+#container .content h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#container form {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.content form div:nth-child(5), 
+.content form div:nth-child(6) {
+    grid-column: span 2;
+}
+
+.content h1 {
+    font-size: 25px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 1px solid rgba(17, 20, 11, 0.5);
+    outline: none;
+    font-size: 12px;
+}
+
+form label {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 32px;
+    letter-spacing: 0.8px;
+}
+
+form a {
+    width: 150px;
+    height: 40px;
+    background-color: #ffffff22;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    align-self: end;
+}
+
+form a:hover {
+    background: #fff;
+    color: #4153b1;
+}
+
+form button {
+    background: white;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #4153b1;
+    margin-top: 10px;
+    cursor: pointer;
+    grid-column: 2;
+    justify-self: end;
+}
+
+form button:hover {
+    background-color: #18235a;
+    color: white;
+    text-decoration: none;
+}
+
+.search form {
+    display: flex;
+    margin: 20px 35px;
+    width: 500px;
+}
+
+.search form button {
+    width: 90px;
+    height: 30px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+@media screen and (min-width: 577px) {
+    .search form {
+        margin: 20px 140px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    header img {
+        margin-top: 15px;
+        margin-left: 40px;
+    }
+
+    nav {
+        margin-right: 20px;
+    }
+    .content h1 {
+        font-size: 28px;
+    }
+
+    form input, form textarea {
+        font-size: 14px;
+    }
+
+    form label {
+        font-size: 14px;
+    }
+
+    .search form {
+        margin: 20px 450px;
+    }
+}
